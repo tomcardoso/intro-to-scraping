@@ -9,9 +9,10 @@ These are resources for a one-day class on the basics of web scraping taught at 
 Though this course assumes a basic working knowledge of R, the resources should be straightforward enough that they can be followed by someone with a background in a different programming language, such as JavaScript, Ruby or Python.
 
 ### Part 1: Introduction
+  - About me
   - What is scraping?
-  - When is it useful? (extracting text, tables, images, bulk downloading files, etc.)
-  - Types of scraping (manual entry, text pattern matching, using APIs, parsing the DOM)
+  - When is it useful? (extracting text, tables, images, bulk downloading files, automating form entry)
+  - Types of scraping (manual entry, text pattern matching, using APIs, parsing the DOM, headless browsers)
   - What you will learn
 
 ### Part 2: The basics of markup
@@ -27,16 +28,24 @@ Though this course assumes a basic working knowledge of R, the resources should 
   - Writing a basic JavaScript selector query
 
 ### Part 4: Writing your first scraper with rvest
+  - Quick tidyverse crash course
   - Connecting to a webpage and extracting information
+  - Caveats with high-traffic sites, incl. Facebook, Google, Amazon, etc.
   - Throttling your scrape
+  - Scrape first, clean later
+  - Always err on the side of collecting more data than less
+  - Make it reproducible
   - Building a scraper to build a scraper
+  - Advanced scraping with RSelenium
+  - Additional resources: https://github.com/yusuzech/r-web-scraping-cheat-sheet
 
 ### Part 5: Offline document scraping
   - Challenges
   - Tabula
   - Tesseract, pdfplumber, docs2csv
-  - [Parsing prickly PDFs](https://github.com/jsfenfen/parsing-prickly-pdfs)
+  - Additional resources: [Parsing prickly PDFs](https://github.com/jsfenfen/parsing-prickly-pdfs)
 
-### Part 6: Let's build a scraper from scratch!
+### Part 6 (time allowing): Let's build a scraper from scratch!
   - Pick a target website and let's write a scraper together
-  - Individual scraping work
+  - Individual scraping
+  - That's it!
