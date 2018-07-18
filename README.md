@@ -8,44 +8,60 @@ These are resources for a one-day class on the basics of web scraping taught at 
 
 Though this course assumes a basic working knowledge of R, the resources should be straightforward enough that they can be followed by someone with a background in a different programming language, such as JavaScript, Ruby or Python.
 
-### Part 1: Introduction
+### Part 1: Introduction (9:15am to 9:45am)
   - About me
+  - Today's schedule
   - What is scraping?
   - When is it useful? (extracting text, tables, images, bulk downloading files, automating form entry)
   - Types of scraping (manual entry, text pattern matching, using APIs, parsing the DOM, headless browsers)
   - What you will learn
 
-### Part 2: The basics of markup
+### Part 2: The basics of markup (9:45am to 10:30am)
   - How web pages work
   - HTML and the DOM, and "view source"
+  - Exercise: Let's use View Source and peruse some websites
   - JSON, XML and APIs
   - Chrome Developer Tools
+  - Exercise: Getting familiar with Chrome Developer Tools's Elements, Console and Network tabs
 
-### Part 3: Patterns and selections
-  - Selectors and XPath
+### 15min break, 10:30am to 10:45am
+
+### Part 3: Patterns and selections (10:45am to 12pm)
   - Basic regular expressions
+  - Exercise: Let's write some regular expressions
+  - Selectors and XPath
   - Identifying patterns in markup
   - Writing a basic JavaScript selector query
+  - Exercise: Let's write some queries
 
-### Part 4: Writing your first scraper with rvest
+### Lunch break, 12pm to 1:15pm
+
+### Part 4: Writing your first scraper with rvest (1:15pm to 2:45pm)
   - Quick tidyverse crash course
+  - Exercise: Using tidyverse packages to read, manipulate, pipe and save data
   - Connecting to a webpage and extracting information
+  - Exercise: Getting familiar with rvest
   - Caveats with high-traffic sites, incl. Facebook, Google, Amazon, etc.
   - Throttling your scrape
+  - Exercise: Let's build a throttler
   - Scrape first, clean later
   - Always err on the side of collecting more data than less
   - Make it reproducible
+  - Exercise: Adapt our scraper to a new website
   - Building a scraper to build a scraper
   - Advanced scraping with RSelenium
   - Additional resources: https://github.com/yusuzech/r-web-scraping-cheat-sheet
 
-### Part 5: Offline document scraping
-  - Challenges
+### 15min break, 2:45pm to 3pm
+
+### Part 5: Offline document scraping (3:00pm to 3:30pm)
+  - Challenges and picking the right tool for the job
   - Tabula
   - Tesseract, pdfplumber, docs2csv
+  - Exercise: Let's use Tabula to extract tables from a PDF
   - Additional resources: [Parsing prickly PDFs](https://github.com/jsfenfen/parsing-prickly-pdfs)
 
-### Part 6 (time allowing): Let's build a scraper from scratch!
+### Part 6 (time allowing): Let's build a scraper from scratch! (3:30pm to end)
   - Pick a target website and let's write a scraper together
-  - Individual scraping
+  - Exercise: Individual scraping
   - That's it!
