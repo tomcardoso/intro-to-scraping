@@ -39,11 +39,12 @@ Though this course assumes a basic working knowledge of R, the resources should 
 
 ### Lunch break, 12pm to 1:15pm
 
-### [Part 4: Writing your first scraper with rvest (1:15pm to 2:45pm)](part-4-writing-your-first-scraper.html)
+### [Part 4: Writing your first scraper with rvest (1:15pm to 3pm)](part-4-writing-your-first-scraper.html)
   - Quick tidyverse crash course
   - _Exercise: Using tidyverse packages to read, manipulate, pipe and save data_
   - Connecting to a webpage and extracting information
   - _Exercise: Getting familiar with rvest_
+  - Building a scraper to build a scraper
   - Caveats with high-traffic sites, incl. Facebook, Google, Amazon, etc.
   - Throttling your scrape
   - _Exercise: Let's build a throttler_
@@ -51,20 +52,19 @@ Though this course assumes a basic working knowledge of R, the resources should 
   - Always err on the side of collecting more data than less
   - Make it reproducible
   - _Exercise: Adapt our scraper to a new website_
-  - Building a scraper to build a scraper
   - Advanced scraping with RSelenium
   - **Additional resources: [https://github.com/yusuzech/r-web-scraping-cheat-sheet](https://github.com/yusuzech/r-web-scraping-cheat-sheet)**
 
-### 15min break, 2:45pm to 3pm
+### 15min break, 3pm to 3:15pm
 
-### Part 5: Offline document scraping (3:00pm to 3:30pm)
+### Part 5: Offline document scraping (3:15pm to 3:45pm)
   - Challenges and picking the right tool for the job
   - Tabula and Adobe Acrobat
   - Tesseract, pdfplumber, docs2csv
   - _Exercise: Let's use Tabula to extract tables from a PDF_
   - **Additional resources: [Parsing prickly PDFs](https://github.com/jsfenfen/parsing-prickly-pdfs)**
 
-### Part 6 (time allowing): Let's build a scraper from scratch! (3:30pm to end)
+### Part 6 (time allowing): Let's build a scraper from scratch! (3:45pm to end)
   - Pick a target website and let's write a scraper together
   - _Exercise: Individual scraping_
   - That's it!

@@ -1,3 +1,5 @@
+rm(list=ls())
+
 library('tidyverse')
 
 setwd('~/Sites/personal/intro-to-scraping/assets')

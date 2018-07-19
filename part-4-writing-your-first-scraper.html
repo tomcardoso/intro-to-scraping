@@ -105,30 +105,85 @@
 				</section>
 
 				<section>
-					<p>Now let's load the rvest package and get down to it.</p>
+					<p>Now let's load the <code>rvest</code> package and get down to it.</p>
 				</section>
 
+				<section>
+					<p>At its core, <code>rvest</code> hinges on one command: <code>read_html()</code>. That command tells <code>rvest</code> which page it should fetch. Let's try it out.</p>
+				</section>
 
+				<section>
+					<p><strong>procurement.R</strong></p>
+				</section>
 
+				<section>
+					<p>Building that index of URLs is a common scraping tactic — build a scraper, grab a list of URLs, and then build a second scraper that consumes those URLs.</p>
+				</section>
 
+				<section>
+					<p>The only issue with this approach is that you have no guarantee the HTML structure will be consistent page to page. I originally planned to show you the nested scraper working on the Treasury Board website, but the HTML structure of the tables was all over the place. A great real-life example of this variability!</p>
+				</section>
 
+				<section>
+					<p>Before reaching for <code>rvest</code>, you should make sure you actually need it. Here's an example: <a href="# https://www.canada.ca/en/health-canada/services/drugs-health-products/drug-products/prescription-drug-list/list.html"># https://www.canada.ca/en/health-canada/services/drugs-health-products/drug-products/prescription-drug-list/list.html</a></p>
+				</section>
 
-				<!-- ### Part 4: Writing your first scraper with rvest (1:15pm to 2:45pm)
-				  - Quick tidyverse crash course
-				  - _Exercise: Using tidyverse packages to read, manipulate, pipe and save data_
-				  - Connecting to a webpage and extracting information
-				  - _Exercise: Getting familiar with rvest_
-				  - Caveats with high-traffic sites, incl. Facebook, Google, Amazon, etc.
-				  - Throttling your scrape
-				  - _Exercise: Let's build a throttler_
-				  - Scrape first, clean later
-				  - Always err on the side of collecting more data than less
-				  - Make it reproducible
-				  - _Exercise: Adapt our scraper to a new website_
-				  - Building a scraper to build a scraper
-				  - Advanced scraping with RSelenium
-				  - **Additional resources: https://github.com/yusuzech/r-web-scraping-cheat-sheet** -->
+				<section>
+					<p>Because this page is a single table, you can actually just select the table with your cursor, copy it, and paste it into Excel!</p>
+				</section>
 
+				<section>
+					<p><code>rvest</code> won't always work. High-traffic sites are wise to our scraping ways, and are fairly scrape-proof. Let's take a look at the source for Facebook and see for ourselves.</p>
+				</section>
+
+				<section>
+					<p>Even on fairly easy-to-scrape sites, you'll want to be careful not to scrape too aggressively. <code>rvest</code> will want to go as fast as possible, but that could get your IP address automatically banned by the server.</p>
+				</section>
+
+				<section>
+					<p>That's where throttling comes in. Let's build a basic scraper with some throttling functionality.</p>
+				</section>
+
+				<section>
+					<p><strong>globeandmail.R</strong></p>
+				</section>
+
+				<section>
+					<p>One important mantra to follow when scraping: <em>never</em> manipulate or clean up your data within the scrape process. It's much better to get a raw scrape of a page, then clean it up either in a different file or a different variable. Depending on your data, you may have thousands of pages to scrape — you don't want to have to scrape it multiple times if at all possible.</p>
+				</section>
+
+				<section>
+					<p>A corollary of this rule is that you should always err on the side of collecting more rather than less data. Put another way: if the web page you're scraping has a series of fields (let's say date, name, address, age, and postal code), you may think you don't need the postal code because you already have the address. You should <strong>still scrape it</strong>. You never know what you'll end up needing later.</p>
+				</section>
+
+				<section>
+					<p>Finally, as much as possible, try to make your scrape reproducible. That is, try to design it such that you can re-run it again two months later with minimal tweaking. <code>rvest</code> does a good job of offering reproducibility out of the box, but just beware that you may end up revisiting an old scraper two years later.</p>
+				</section>
+
+				<section>
+					<p>Now that that's all done, let's pick a website together and write a new scraper from scratch. This could go off the rails, so apologies in advance…</p>
+				</section>
+
+				<section>
+					<p><strong>newscrape.R</strong></p>
+				</section>
+
+				<section>
+					<p>Finally, in some cases you may want to scrape a website by partly filling in forms or submitting data. For example, say you want to scrape a web page that requires you to paginate through a list (<a href="http://www1.canada.ca/consultingcanadians/page/search?lang=en&keywords=&start=1&type=all&year=0&subjectid=0&departmentid=73&submit=Apply">here's an example</a>)…</p>
+				</section>
+
+				<section>
+					<p>You can automate the clicking of that "next" button and filling out of forms with a package called RSelenium. It's very powerful, but also very involved, and a bit outside the scope of this course.</p>
+				</section>
+
+				<section>
+					<p>If you're curious, I've included a link to an RSelenium tutorial in the online course notes.</p>
+				</section>
+
+				<section>
+					<p>15 minute break!</p>
+					<img src="img/7Dl2.gif" alt="">
+				</section>
 
 			</div>
 		</div>
