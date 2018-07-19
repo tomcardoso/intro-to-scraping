@@ -1,0 +1,177 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<style>
+			.reveal h1 {
+				text-transform: none;
+				line-height: 1;
+			}
+			.reveal ul {
+				margin: 0;
+			}
+			.reveal li {
+				list-style-type: none;
+			}
+			.reveal p {
+				margin: 0;
+				margin-bottom: 0.5em;
+			}
+			.reveal pre {
+				box-shadow: none;
+			}
+			.reveal pre code {
+				padding: 25px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section>
+					<h1>The basics of markup</h1>
+				</section>
+
+				<section>
+					<p>Webpages, how do they work?</p>
+				</section>
+
+				<section>
+					<img src="img/Acronymsoup.png" alt="">
+				</section>
+
+				<section>
+					<img src="img/ClientServer.gif" alt="">
+				</section>
+
+				<section>
+					<img src="img/how-web-server-works.jpg" alt="">
+				</section>
+
+				<section>
+					<img src="img/images.jpg" alt="">
+				</section>
+
+				<section>
+					<p>Three parts</p>
+					<ol>
+						<li><p>1. A server, which hosts files and data, and is often an application unto itself that can generate pages on-the-fly</p></li>
+						<li><p>2. A browser, or "client," which connects to a server and requests stuff</p></li>
+						<li><p>3. The gluey part in the middle (domain names, load balancers, templating engines)</p></li>
+					</ol>
+				</section>
+
+				<section>
+					<p>Scraping is primarily concerned with extracting data from what we call the "front end", or the stuff that gets rendered in your browser (servers are often called the "back end").</p>
+					<p>You <em>can</em> extract data directly from a server, but often that's done through hacking, which is bad.</p>
+				</section>
+
+				<section>
+					<p>The difference is that with scraping, you're selecting information that's been made public by the person or organization running the web page. The information's all there!</p>
+				</section>
+
+				<section>
+					<p>So, how do web pages work?</p>
+				</section>
+
+				<section>
+					<img src="img/html-css-js.png" alt="">
+				</section>
+
+				<section>
+					<p>If web pages were an IKEA dresser…</p>
+					<ul>
+						<li><p>HTML would be the assembly instructions</p></li>
+						<li><p>CSS would be the tchotchkes you use to decorate it</p></li>
+						<li><p>JavaScript is the functionality, allowing you to open and close your drawers (most of the time, anyway — this is IKEA after all…)</p></li>
+					</ul>
+				</section>
+
+				<section>
+					<p>In almost all cases, scraping is concerned primarily with HTML.</p>
+					<p>We don't care how it looks or what happens when you click a button. We just want the data!</p>
+				</section>
+
+				<section>
+					<p>The way we access this information is through a concept called the <strong>DOM</strong>.</p>
+					<p>Stands for <strong>document object model</strong>. It's a standard maintained by the World Wide Web Consortium.</p>
+				</section>
+
+				<section>
+					<p>The DOM is the common structure of all web pages, and is what allows browsers to know how to parse the data they receive from the server. In the IKEA example, it would be the fact that all assembly instructions are printed on paper using ink and language that we know how to read.</p>
+				</section>
+
+				<section>
+					<p>At its core, the DOM (and HTML) follows a tree model. The top-level <strong>node</strong> is the <code>html</code> element, and everything else is a <strong>child</strong> of that element.</p>
+				</section>
+
+				<section>
+					<p>Enough talking — let's check it out for ourselves! Go to a web page, right-click anywhere and click on "view source."</p>
+				</section>
+
+				<section>
+					<p>The web is more than just HTML, CSS, JavaScript, though. There's also <strong>APIs</strong>, or <strong>application programming interfaces</strong>.</p>
+				</section>
+
+				<section>
+					<p>These days, APIs power a lot of the web. Your smart phone uses APIs to get weather data, check your email, send you map directions when you're lost on Wilfrid Laurier's campus on your way to teach this class…</p>
+				</section>
+
+				<section>
+					<p>APIs are a machine-readable data interface (unlike HTML, which is still machine-readable but designed for normal human consumption). You write code requesting a certain chunk of data, and the server knows how to parse that and returns you data in a structured way.</p>
+				</section>
+
+				<section>
+					<p>API data usually manifests in two "flavours:"</p>
+					<ul>
+						<li><p>JSON (pronounced like "Jason"), or "JavaScript object notation" (no one calls it that)</p></li>
+						<li><p>XML, which has fallen out of favour in the last decade because it's annoying to parse and debug</p></li>
+					</ul>
+				</section>
+
+				<section>
+					<pre>
+						<code data-trim>
+							fetch('https://jsonplaceholder.typicode.com/posts/1')
+							  .then(response => response.json())
+							  .then(json => console.log(json))
+						</code>
+					</pre>
+				</section>
+
+				<section>
+					<p>Let's fire up Chrome Developer Tools and find out what that code does.</p>
+					<p>Right click anywhere on any webpage and click on "inspect."</p>
+				</section>
+
+				<section>
+					<h3>Exercise: Let's get familiar with Dev Tools</h3>
+				</section>
+
+				<section>
+					<p>15 minute break!</p>
+					<img src="img/giphy.gif" alt="">
+				</section>
+
+				<!-- How web pages work
+			  HTML and the DOM, and "view source"
+			  Exercise: Let's use View Source and peruse some websites
+			  JSON, XML and APIs
+			  Chrome Developer Tools
+			  Exercise: Getting familiar with Chrome Developer Tools's Elements, Console and Network tabs -->
+
+			</div>
+		</div>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script>
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+				]
+			});
+		</script>
+	</body>
+</html>

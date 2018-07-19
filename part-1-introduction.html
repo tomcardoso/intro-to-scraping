@@ -1,0 +1,118 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+		<style>
+			.reveal h1 {
+				text-transform: none;
+				line-height: 1;
+			}
+			.reveal ul {
+				margin: 0;
+			}
+			.reveal li {
+				list-style-type: none;
+			}
+			.reveal p {
+				margin: 0;
+				margin-bottom: 0.5em;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section>
+					<h1>Introduction to scraping</h1>
+				</section>
+
+				<section>
+					<h2>About me</h2>
+					<img height='40%' src='https://www.theglobeandmail.com/resizer/DPJGItTxu_N_HlSSo0KzSExAAIE=/1200x0/filters:quality(80)/s3.amazonaws.com/arc-authors/tgam/a8259486-b51b-4dc2-abdb-dfeb95506353.JPG' />
+					<p>Tom Cardoso, data journalist at The Globe and Mail</p>
+				</section>
+
+				<section>
+					<h4>Today's schedule</h4>
+					<ul style='font-size: 0.7em'>
+						<li><p><strong>Part 1:</strong> Introduction (9:15am to 9:45am)</p></li>
+						<li><p><strong>Part 2:</strong> The basics of markup (9:45am to 10:30am)</p></li>
+						<li style='opacity: 0.5'><p><em>15min break, 10:30am to 10:45am</em></p></li>
+						<li><p><strong>Part 3:</strong> Patterns and selections (10:45am to 12pm)</p></li>
+						<li style='opacity: 0.5'><p><em>Lunch break, 12pm to 1:15pm</em></p></li>
+						<li><p><strong>Part 4:</strong> Writing your first scraper with rvest (1:15pm to 2:45pm)</p></li>
+						<li style='opacity: 0.5'><p><em>15min break, 2:45pm to 3pm</em></p></li>
+						<li><p><strong>Part 5:</strong> Offline document scraping (3:00pm to 3:30pm)</p></li>
+						<li><p><strong>Part 6:</strong> (Time allowing) Let's build a scraper from scratch! (3:30pm to end)</p></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>What is scraping?</h2>
+				</section>
+
+				<section>
+					<p>Hint: not this</p>
+					<img src="img/gallery-1446570700-hacker.jpg" alt="">
+				</section>
+
+				<section>
+					<p>A way of systematically and reproducibly collecting information</p>
+				</section>
+
+				<section>
+					<p>Consists of three steps:</p>
+					<ol>
+						<li><p>1. Visiting a web page</p></li>
+						<li><p>2. Selecting and extracting data from that page</p></li>
+						<li><p>3. Saving the results of that extraction to a local file (most often a CSV or other database)</p></li>
+					</ol>
+				</section>
+
+				<section>
+					<p>Scraping is useful for:</p>
+					<ul>
+						<li><p>Extracting text</p></li>
+						<li><p>Download the contents of a table</p></li>
+						<li><p>Downloading images</p></li>
+						<li><p>Bulk downloading files (such as PDFs)</p></li>
+						<li><p>Automating web form entry</p></li>
+					</ul>
+				</section>
+
+			<section>
+				<p>Many different scraping techniques</p>
+				<ul>
+					<li><p>Manual entry (yes, that's right)</p></li>
+					<li><p>Text pattern matching (e.g. regular expressions)</p></li>
+					<li><p>Using application programming interfaces (commonly known as APIs)</p></li>
+					<li><p>Parsing the DOM</p></li>
+					<li><p>Using a headless browser</p></li>
+				</ul>
+			</section>
+
+			<section>
+				<p>We're going to focus on <strong>parsing the DOM</strong></p>
+			</section>
+
+			<section>
+				<p>By the end of today, you'll (hopefully) have learned how to:</p>
+				<ul>
+					<li><p>Pick a scraping strategy</p></li>
+					<li><p>Navigate the HTML structure of a web page</p></li>
+					<li><p>Indentify markup patterns you can exploit for scraping</p></li>
+					<li><p>Write a basic selection query in your browser's console</p></li>
+					<li><p>Write a basic scraper using <code>rvest</code></p></li>
+					<li><p>Extract data from offline documents (namely PDFs)</p></li>
+				</ul>
+			</section>
+
+			</div>
+		</div>
+		<script src="js/reveal.js"></script>
+		<script>
+			Reveal.initialize();
+		</script>
+	</body>
+</html>

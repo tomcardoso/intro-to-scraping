@@ -1,0 +1,148 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<style>
+			.reveal h1 {
+				text-transform: none;
+				line-height: 1;
+			}
+			.reveal ul {
+				margin: 0;
+			}
+			.reveal li {
+				list-style-type: none;
+			}
+			.reveal p {
+				margin: 0;
+				margin-bottom: 0.5em;
+			}
+			.reveal pre {
+				box-shadow: none;
+			}
+			.reveal pre code {
+				padding: 25px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section>
+					<h1>Patterns and selections</h1>
+				</section>
+
+				<section>
+					<p>Because so much of the web is templated and generated from data stored in databases, it's also <strong>predictable</strong> in its structure.</p>
+				</section>
+
+				<section>
+					<p>For example, take WordPress, the popular blogging content management system. At its most basic, it's designed to take data for blog posts stored in a database and display them. It does this by running a "loop" over all the posts to be displayed.</p>
+				</section>
+
+				<section>
+					<p>That loop looks like this:</p>
+					<img src="img/Screen Shot 2018-07-19 at 2.27.07 AM.png" alt="">
+				</section>
+
+				<section>
+					<p>So each post will have, for the most part, exactly the same HTML structure.</p>
+				</section>
+
+				<section>
+					<p>Before we dive into that structure, let's start with something a bit more basic: text itself.</p>
+				</section>
+
+				<section>
+					<p>Just as HTML has a structure, so does text itself (thanks, linguistics!). Namely, you have characters, digits, spaces, word boundaries, etc.</p>
+				</section>
+
+				<section>
+					<p>A long time ago, someone figured out we could create a sort of "language" (it's not really a language) to search and query text using these formal characteristics. That's what we call <strong>regular expressions</strong>, or <strong>regex</strong> for short.</p>
+				</section>
+
+				<section>
+					<img style="height: 90%;" src="img/Screen Shot 2018-07-19 at 2.30.22 AM.png" alt="">
+				</section>
+
+				<section>
+					<p>It is often <strong>hard</strong> to write and difficult to read, so many people hate it. But it's powerful.</p>
+				</section>
+
+				<section>
+					<p>Here's an example of a regular expression (please bear with me!):</p>
+					<img src="img/Screen Shot 2018-07-19 at 2.38.22 AM.png" alt="">
+				</section>
+
+				<section>
+					<p>Let's write a few of our own together.</p>
+					<p><a href="https://regexone.com/lesson/introduction_abcs">https://regexone.com/lesson/introduction_abcs</a></p>
+				</section>
+
+				<section>
+					<p>Next up: selecting DOM nodes!</p>
+				</section>
+
+				<section>
+					<p>In the same way that we can use regex as a set of instructions to select text, we can use a certain sequence of text to select elements in the DOM.</p>
+				</section>
+
+				<section>
+					<p>There are two common ways of doing this: selectors and XPath.</p>
+					<ul>
+						<li><p>Selectors are far and away the most common, because they're a bit easier to read and are used in JavaScript.</p></li>
+						<li><p>XPath looks a lot more like regex, and can be annoying to get right.</p></li>
+					</ul>
+				</section>
+
+				<section>
+					<p>Both are useful, and luckily for us nowadays browsers can do a lot of the work in telling us what our selection text will be.</p>
+				</section>
+
+				<section>
+					<p>Let's use Dev Tools to look at some markup on The Globe and Mail's homepage and see if we notice some patterns.</p>
+				</section>
+
+				<section>
+					<p>Now that we've noticed a few, let's try and grab text for all the headlines on The Globe's homepage.</p>
+				</section>
+
+				<section>
+					<pre>
+						<code data-trim>
+							let data = document
+								.querySelectorAll('.o-card__hed-text')
+								.forEach(d => d.textContent);
+
+							console.log(data);
+						</code>
+					</pre>
+				</section>
+
+				<section>
+					<p>With those four lines of code, we've just written our first scraper.</p>
+				</section>
+
+				<section>
+					<p>Exercise time: let's all pick a website, identify the structure and write a basic <code>document.querySelectorAll</code> query together to grab some nodes.</p>
+				</section>
+
+				<section>
+					<p>Lunch time!</p>
+				</section>
+
+			</div>
+		</div>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script>
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+				]
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,145 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<style>
+			.reveal h1 {
+				text-transform: none;
+				line-height: 1;
+			}
+			.reveal ul {
+				margin: 0;
+			}
+			.reveal li {
+				list-style-type: none;
+			}
+			.reveal p {
+				margin: 0;
+				margin-bottom: 0.5em;
+			}
+			.reveal pre {
+				box-shadow: none;
+			}
+			.reveal pre code {
+				padding: 25px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section>
+					<h1>Writing your first scraper with <code>rvest</code></h1>
+				</section>
+
+				<section>
+					<p>Let's get into the R portion of the class. Please let me know if I'm going too slow (or too fast!).</p>
+				</section>
+
+				<section>
+					<p>Robust scraping of the sort we're about to attempt can be frustrating. It's a lot of write, run, tweak, repeat. Whenever I'm coding for work, I spend most of my day feeling like this:</p>
+				</section>
+
+				<section>
+					<img src="img/b7e.jpg" alt="">
+				</section>
+
+				<section>
+					<p>Or like this</p>
+					<img src="img/ihave.jpg" alt="">
+				</section>
+
+				<section>
+					<p>Or like this…</p>
+					<img src="img/wpengine-meme.jpg" alt="">
+				</section>
+
+				<section>
+					<p>That's okay! The most important thing to remember when dealing with any kind of coding problem: someone else has already had this problem, asked about it online, and got an answer, which means… you can Google it! Or ask about it on forums such as StackOverflow.</p>
+				</section>
+
+				<section>
+					<p>Before we get to the good stuff, let's talk about the <strong>tidyverse</strong> a little bit. It's a community and set of coding packages for the R language that make analysis <strong>monumentally</strong> easier. <code>rvest</code> is part of the tidyverse.</p>
+				</section>
+
+				<section>
+					<p>There's a lot to know about the tidyverse, but the most important thing we'll need to know for this class is the <strong>pipe</strong> function. It looks like this:</p>
+					<h4><code>%>%</code></h4>
+				</section>
+
+				<section>
+					<p>It, together with other parts of the tidyverse, allows you to turn this…</p>
+					<pre>
+						<code data-trim>
+							for (n in unique(d$x)) {
+								subd <- d[d$x == n]
+							…
+						</code>
+					</pre>
+					Into this:
+					<pre>
+						<code data-trim>
+							d %>%
+								group_by(x) %>%
+							…
+						</code>
+					</pre>
+				</section>
+
+				<section>
+					<p>All the pipe does is tell R: "take the stuff from the left-hand side of the operation, and apply it to the stuff on the right."</p>
+				</section>
+
+				<section>
+					<p>Let's use tidyverse packages together to get a feel for how this works.</p>
+				</section>
+
+				<section>
+					<p><strong>tidyverse.R</strong></p>
+				</section>
+
+				<section>
+					<p>A slightly more advanced example: <strong>sunshine.R</strong></p>
+				</section>
+
+				<section>
+					<p>Now let's load the rvest package and get down to it.</p>
+				</section>
+
+
+
+
+
+
+				<!-- ### Part 4: Writing your first scraper with rvest (1:15pm to 2:45pm)
+				  - Quick tidyverse crash course
+				  - _Exercise: Using tidyverse packages to read, manipulate, pipe and save data_
+				  - Connecting to a webpage and extracting information
+				  - _Exercise: Getting familiar with rvest_
+				  - Caveats with high-traffic sites, incl. Facebook, Google, Amazon, etc.
+				  - Throttling your scrape
+				  - _Exercise: Let's build a throttler_
+				  - Scrape first, clean later
+				  - Always err on the side of collecting more data than less
+				  - Make it reproducible
+				  - _Exercise: Adapt our scraper to a new website_
+				  - Building a scraper to build a scraper
+				  - Advanced scraping with RSelenium
+				  - **Additional resources: https://github.com/yusuzech/r-web-scraping-cheat-sheet** -->
+
+
+			</div>
+		</div>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script>
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+				]
+			});
+		</script>
+	</body>
+</html>
