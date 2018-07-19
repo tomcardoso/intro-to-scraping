@@ -54,10 +54,12 @@ Though this course assumes a basic working knowledge of R, the resources should 
   - _Exercise: Adapt our scraper to a new website_
   - Advanced scraping with RSelenium
   - **Additional resources: [https://github.com/yusuzech/r-web-scraping-cheat-sheet](https://github.com/yusuzech/r-web-scraping-cheat-sheet)**
+  - **RSelenium: [https://www.r-bloggers.com/scraping-with-selenium/](https://www.r-bloggers.com/scraping-with-selenium/)**
 
 ### 15min break, 3pm to 3:15pm
 
-### Part 5: Offline document scraping (3:15pm to 3:45pm)
+### [Part 5: Offline document scraping (3:15pm to 3:45pm)](part-5-offline-document-scraping.html)
+  - Using scrapers to download PDFs and other files
   - Challenges and picking the right tool for the job
   - Tabula and Adobe Acrobat
   - Tesseract, pdfplumber, docs2csv
