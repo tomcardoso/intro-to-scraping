@@ -9,7 +9,7 @@ These are resources for a one-day class on the basics of web scraping taught at 
 
 Though this course assumes a basic working knowledge of R, the resources should be straightforward enough that they can be followed by someone with a background in a different programming language, such as JavaScript, Ruby or Python.
 
-### Part 1: Introduction (9:15am to 9:45am)
+### [Part 1: Introduction (9:15am to 9:45am)](/part-1-introduction.html)
   - About me
   - Today's schedule
   - What is scraping?
@@ -17,29 +17,29 @@ Though this course assumes a basic working knowledge of R, the resources should 
   - Types of scraping (manual entry, text pattern matching, using APIs, parsing the DOM, headless browsers)
   - What you will learn
 
-### Part 2: The basics of markup (9:45am to 10:30am)
+### [Part 2: The basics of markup (9:45am to 10:30am)](part-2-basics-of-markup.html)
   - How web pages work
   - HTML and the DOM, and "view source"
   - Exercise: Let's use View Source and peruse some websites
   - JSON, XML and APIs
   - Chrome Developer Tools
   - _Exercise: Getting familiar with Chrome Developer Tools's Elements, Console and Network tabs_
-  - **Additional resources: https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works**
+  - **Additional resources: [https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works)**
 
 ### 15min break, 10:30am to 10:45am
 
-### Part 3: Patterns and selections (10:45am to 12pm)
+### [Part 3: Patterns and selections (10:45am to 12pm)](part-3-patterns-and-selections.html)
   - Basic regular expressions
   - _Exercise: Let's write some regular expressions_
   - Selectors and XPath
   - Identifying patterns in markup
   - Writing a basic JavaScript selector query
   - _Exercise: Let's write some queries_
-  - **Additional resources: https://regexone.com/**
+  - **Additional resources: [https://regexone.com/](https://regexone.com/)**
 
 ### Lunch break, 12pm to 1:15pm
 
-### Part 4: Writing your first scraper with rvest (1:15pm to 2:45pm)
+### [Part 4: Writing your first scraper with rvest (1:15pm to 2:45pm)](part-4-writing-your-first-scraper.html)
   - Quick tidyverse crash course
   - _Exercise: Using tidyverse packages to read, manipulate, pipe and save data_
   - Connecting to a webpage and extracting information
@@ -53,7 +53,7 @@ Though this course assumes a basic working knowledge of R, the resources should 
   - _Exercise: Adapt our scraper to a new website_
   - Building a scraper to build a scraper
   - Advanced scraping with RSelenium
-  - **Additional resources: https://github.com/yusuzech/r-web-scraping-cheat-sheet**
+  - **Additional resources: [https://github.com/yusuzech/r-web-scraping-cheat-sheet](https://github.com/yusuzech/r-web-scraping-cheat-sheet)**
 
 ### 15min break, 2:45pm to 3pm
 
