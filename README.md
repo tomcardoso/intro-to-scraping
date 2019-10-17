@@ -9,7 +9,7 @@ These are resources for a one-day class on the basics of web scraping taught at 
 
 Though this course assumes a basic working knowledge of R, the resources should be straightforward enough that they can be followed by someone with a background in a different programming language, such as JavaScript, Ruby or Python.
 
-### [Part 1: Introduction (9:15am to 9:45am)](/part-1-introduction.html)
+### [Part 1: Introduction (9:15am to 9:45am)](https://tomcardoso.github.io/intro-to-scraping/part-1-introduction.html)
   - About me
   - Today's schedule
   - What is scraping?
@@ -17,7 +17,7 @@ Though this course assumes a basic working knowledge of R, the resources should 
   - Types of scraping (manual entry, text pattern matching, using APIs, parsing the DOM, headless browsers)
   - What you will learn
 
-### [Part 2: The basics of markup (9:45am to 10:30am)](part-2-basics-of-markup.html)
+### [Part 2: The basics of markup (9:45am to 10:30am)](https://tomcardoso.github.io/intro-to-scraping/part-2-basics-of-markup.html)
   - How web pages work
   - HTML and the DOM, and "view source"
   - Exercise: Let's use View Source and peruse some websites
@@ -28,7 +28,7 @@ Though this course assumes a basic working knowledge of R, the resources should 
 
 ### 15min break, 10:30am to 10:45am
 
-### [Part 3: Patterns and selections (10:45am to 12pm)](part-3-patterns-and-selections.html)
+### [Part 3: Patterns and selections (10:45am to 12pm)](https://tomcardoso.github.io/intro-to-scraping/part-3-patterns-and-selections.html)
   - Basic regular expressions
   - _Exercise: Let's write some regular expressions_
   - Selectors and XPath
@@ -39,7 +39,7 @@ Though this course assumes a basic working knowledge of R, the resources should 
 
 ### Lunch break, 12pm to 1:15pm
 
-### [Part 4: Writing your first scraper with rvest (1:15pm to 3pm)](part-4-writing-your-first-scraper.html)
+### [Part 4: Writing your first scraper with rvest (1:15pm to 3pm)](https://tomcardoso.github.io/intro-to-scraping/part-4-writing-your-first-scraper.html)
   - Quick tidyverse crash course
   - _Exercise: Using tidyverse packages to read, manipulate, pipe and save data_
   - Connecting to a webpage and extracting information
@@ -58,7 +58,7 @@ Though this course assumes a basic working knowledge of R, the resources should 
 
 ### 15min break, 3pm to 3:15pm
 
-### [Part 5: Offline document scraping (3:15pm to 3:45pm)](part-5-offline-document-scraping.html)
+### [Part 5: Offline document scraping (3:15pm to 3:45pm)](https://tomcardoso.github.io/intro-to-scraping/part-5-offline-document-scraping.html)
   - Using scrapers to download PDFs and other files
   - Challenges and picking the right tool for the job
   - Tabula and Adobe Acrobat
