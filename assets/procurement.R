@@ -1,9 +1,13 @@
-rm(list=ls())
+load_requirements <- function(pkg){
+  new.pkg <- pkg[!(pkg %in% installed.packages()[, 'Package'])]
+  if (length(new.pkg))
+      install.packages(new.pkg, dependencies = TRUE)
+  sapply(pkg, require, character.only = TRUE)
+}
 
-library('tidyverse')
-library('rvest')
+packages <- c('here', 'tidyverse', 'rvest')
 
-setwd('~/Sites/personal/intro-to-scraping/assets')
+load_requirements(packages)
 
 # We'll get back to this URL later if we have time
 index_page_url <- 'https://www.tpsgc-pwgsc.gc.ca/cgi-bin/proactive/cl.pl?lang=eng&SCR=Q&Sort=0'

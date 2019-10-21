@@ -1,10 +1,13 @@
-rm(list=ls())
+load_requirements <- function(pkg){
+  new.pkg <- pkg[!(pkg %in% installed.packages()[, 'Package'])]
+  if (length(new.pkg))
+      install.packages(new.pkg, dependencies = TRUE)
+  sapply(pkg, require, character.only = TRUE)
+}
 
-library('tidyverse')
-library('rvest')
-library('downloader')
+packages <- c('here', 'tidyverse', 'rvest', 'downloader')
 
-setwd('~/Sites/personal/intro-to-scraping/assets')
+load_requirements(packages)
 
 budgets <- read_html('https://www.budget.gc.ca/pdfarch/index-eng.html') %>%
   html_nodes('.docType ul li a')
@@ -24,5 +27,5 @@ budget_data <- data_frame(text = budgets_text, url = budgets_links) %>%
 for (i in seq(nrow(budget_data))) {
   url <- budget_data[i, 2] %>% pull()
   id <- budget_data[i, 3] %>% pull()
-  download(url, paste(id, '.pdf', sep = ''), quiet = FALSE, mode = 'wb')
+  download(url, here::here('assets', paste(id, '.pdf', sep = '')), quiet = FALSE, mode = 'wb')
 }

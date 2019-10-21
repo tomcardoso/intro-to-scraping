@@ -1,10 +1,15 @@
-rm(list=ls())
+load_requirements <- function(pkg){
+  new.pkg <- pkg[!(pkg %in% installed.packages()[, 'Package'])]
+  if (length(new.pkg))
+      install.packages(new.pkg, dependencies = TRUE)
+  sapply(pkg, require, character.only = TRUE)
+}
 
-library('tidyverse')
+packages <- c('here', 'tidyverse')
 
-setwd('~/Sites/personal/intro-to-scraping/assets')
+load_requirements(packages)
 
-data <- read_csv('en-2017-pssd-compendium-20180320-utf8.csv') %>%
+data <- read_csv(here::here('assets', 'en-2017-pssd-compendium-20180320-utf8.csv')) %>%
   rename(
     sector = 'Sector',
     last_name = 'Last Name',
